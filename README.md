@@ -18,7 +18,7 @@ Trunk Interactions:
 https://realshadow.lol/uploads/Xl80c/
 
 Trashcan Interactions:
-https://realshadow.lol/uploads/TidXs/
+https://streamable.com/hiyudw
 
 Searchable Dumpster Interactions:
 https://realshadow.lol/uploads/fh6AV/
