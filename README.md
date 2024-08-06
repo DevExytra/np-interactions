@@ -1,5 +1,7 @@
 # np-interactions by Exytra
 
+Please read trough this ReadME!
+
 Do not change anything in the client/main.lua you could break things.
 If you want to Remove the trashcan interactions delete the trashcan.lua.
 
@@ -25,19 +27,3 @@ You are always able to contact me on Discord.
 There is currently a known bug with PA-Inventory that it for some reason fucks up the trunk stashes wil work on a fix.
 
 Feel free to add your own Iventory support to do that head over to client > main.lua
-
-# QnA
-Q: How do I install it?
-A: Place this resource somwhere after the interact resource this is important to ensure it works properly.
-
-Q: How to I add vehicles to it?
-A: Follow the code structure of the vehicles.lua it is easy.
-
-Q: Why is the server.main executing a SQL query?
-A: This query clears the Trashbin entry in your database to clear out trashcans.
-
-Q: Why is it executing the query every 5 minutes?
-A: You know you can change it :) by changing the first number.
-
-Example: 5 * 60 * 1000 = 5 Minutes
-Example: 2 * 60 * 1000 = 2 Minutes
