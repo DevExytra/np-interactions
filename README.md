@@ -20,6 +20,8 @@ Currently there is only Support for
 QB-Inventory
 PA-Inventory
 
+Feel free to add your own Iventory support to do that head over to client > main.lua
+
 # QnA
 
 Q: How do I install it?
