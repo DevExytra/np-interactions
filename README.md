@@ -12,6 +12,16 @@ In order to make the whole interactions work: Thank you Antunes and the Karma De
 Join Karmas discord: https://discord.gg/DNCWBd2qPH and check the #free-releases channel!
 
 
+# Previews:
+
+https://realshadow.lol/uploads/Xl80c/
+
+
+https://realshadow.lol/uploads/TidXs/
+
+
+https://realshadow.lol/uploads/fh6AV/
+
 # Bugs / Issues
 You are always able to contact me on Discord.
 
