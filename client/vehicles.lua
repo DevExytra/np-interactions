@@ -107,15 +107,15 @@ end
 local function ToggleDoor(vehicle, door)
     if GetVehicleDoorLockStatus(vehicle) < 2 then
         local doorAngle = GetVehicleDoorAngleRatio(vehicle, door)
-        print("DEBUG: Current door angle ratio: " .. tostring(doorAngle)) -- Debug message
+       -- print("DEBUG: Current door angle ratio: " .. tostring(doorAngle)) -- Debug message
 
         if doorAngle > 0.0 then
             -- Door is open; close it
-            print("DEBUG: Closing door " .. tostring(door)) -- Debug message
+          --  print("DEBUG: Closing door " .. tostring(door)) -- Debug message
             SetVehicleDoorShut(vehicle, door, false)
         else
             -- Door is closed; open it
-            print("DEBUG: Opening door " .. tostring(door)) -- Debug message
+          --  print("DEBUG: Opening door " .. tostring(door)) -- Debug message
             SetVehicleDoorOpen(vehicle, door, false)
         end
     else
