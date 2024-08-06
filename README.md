@@ -31,6 +31,9 @@ Currently there is only Support for
 QB-Inventory
 PA-Inventory
 
+I am facing issues in the console. It says something about a model or entity.
+This can be due to a invalid model name! Check if the model you want to attach the interaction to actually exists.
+
 Feel free to add your own Iventory support to do that head over to client > main.lua
 
 # QnA
