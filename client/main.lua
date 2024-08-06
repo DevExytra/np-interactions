@@ -1,6 +1,6 @@
 
 -- ## Threads ## --
-RegisterNetEvent('exytralib:client:playAnimation', function() -- Animation Wrapper for qb-inventory server > main.lua line 550
+RegisterNetEvent('exytralib:client:playAnimation', function() -- Animation Wrapper for PA-Inventory Probably not used on your Server
     local playerPed = PlayerPedId()
     if not playerPed or not DoesEntityExist(playerPed) then return end
 
@@ -17,7 +17,7 @@ RegisterNetEvent('exytralib:client:playAnimation', function() -- Animation Wrapp
     Citizen.Wait(1500)
 end)
 
-RegisterNetEvent('exytralib:client:playPickupAnimation', function() -- Animation Wrapper for qb-inventory server > main.lua line 550
+RegisterNetEvent('exytralib:client:playPickupAnimation', function() -- Animation Wrapper for PA-Inventory Probably not used on your Server
     local playerPed = PlayerPedId()
     if not playerPed or not DoesEntityExist(playerPed) then return end
 
@@ -34,7 +34,7 @@ RegisterNetEvent('exytralib:client:playPickupAnimation', function() -- Animation
     Citizen.Wait(1500)
 end)
 
-RegisterNetEvent('exytralib:open:stash')
+RegisterNetEvent('exytralib:open:stash') -- This was used for some of the MRPD Interactions
 AddEventHandler('exytralib:open:stash', function(box)
     local name = box
     TriggerServerEvent("inventory:server:OpenInventory", "stash", name, {
@@ -44,7 +44,7 @@ AddEventHandler('exytralib:open:stash', function(box)
     TriggerEvent("inventory:client:SetCurrentStash", name)
 end)
 
-RegisterNetEvent('exytralib:open:trunk')
+RegisterNetEvent('exytralib:open:trunk') -- This is used for some of the Trunk Interactions
 AddEventHandler('exytralib:open:trunk', function(box)
     local name = box
     TriggerServerEvent("inventory:server:OpenInventory", "stash", name, {
@@ -54,7 +54,7 @@ AddEventHandler('exytralib:open:trunk', function(box)
     TriggerEvent("inventory:client:SetCurrentStash", name)
 end)
 
-RegisterNetEvent('exytralib:open:bin')
+RegisterNetEvent('exytralib:open:bin') -- This is used for the Trashcan interactions
 AddEventHandler('exytralib:open:bin', function(box)
     local name = box
     TriggerServerEvent("inventory:server:OpenInventory", "stash", name, {
