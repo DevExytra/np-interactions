@@ -2,6 +2,9 @@
 
 Please read trough this ReadME!
 
+This is only a example on how to add those things I will from time to time add more interactions or functionalities!
+You can always add things your self! :)
+
 Do not change anything in the client/main.lua you could break things.
 If you want to Remove the trashcan interactions delete the trashcan.lua.
 
