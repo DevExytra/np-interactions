@@ -14,16 +14,12 @@ In order to make the whole interactions work: Thank you Antunes and the Karma De
 Join Karmas discord: https://discord.gg/DNCWBd2qPH and check the #free-releases channel!
 
 
-# Previews:
+# Preview Trashcan:
 
-Trunk Interactions:
-https://realshadow.lol/uploads/Xl80c/
+https://github.com/user-attachments/assets/1680aee2-7474-4c87-b4b3-230b217c6f9b
 
-Trashcan Interactions:
-https://streamable.com/hiyudw
-
-Searchable Dumpster Interactions:
-https://realshadow.lol/uploads/fh6AV/
+# Preview Vehicle:
+https://streamable.com/7wj6hv
 
 # Bugs / Issues
 You are always able to contact me on Discord.
