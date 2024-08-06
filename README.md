@@ -4,6 +4,8 @@
 Do not change anything in the client/main.lua you could break things.
 If you want to Remove the trashcan interactions delete the trashcan.lua.
 
+It does currently not include all vehicles because I was too tired you need to add them yourself!
+
 # Dependencies
 In order to make the search trash to work:
 https://github.com/KevinGirardx/qb-trashsearch/blob/main/config.lua
