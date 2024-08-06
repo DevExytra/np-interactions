@@ -14,12 +14,13 @@ Join Karmas discord: https://discord.gg/DNCWBd2qPH and check the #free-releases 
 
 # Previews:
 
+Trunk Interactions:
 https://realshadow.lol/uploads/Xl80c/
 
-
+Trashcan Interactions:
 https://realshadow.lol/uploads/TidXs/
 
-
+Searchable Dumpster Interactions:
 https://realshadow.lol/uploads/fh6AV/
 
 # Bugs / Issues
