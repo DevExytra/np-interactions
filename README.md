@@ -11,6 +11,15 @@ https://github.com/KevinGirardx/qb-trashsearch/blob/main/config.lua
 In order to make the whole interactions work: Thank you Antunes and the Karma Developer Team <3
 https://cdn.discordapp.com/attachments/1070832717920469043/1263794879503269920/interact.rar?ex=66b34333&is=66b1f1b3&hm=68c942cc2baa04e2172f3b4f6f099c71bedbcb1be875c4163e1d83a261ac3a60&
 
+
+# Bugs / Issues
+You are always able to contact me on Discord.
+
+I am facing issues with my inventory not opening in the trunk:
+Currently there is only Support for
+QB-Inventory
+PA-Inventory
+
 # QnA
 
 Q: How do I install it?
