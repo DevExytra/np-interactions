@@ -27,7 +27,6 @@ You are always able to contact me on Discord.
 I am facing issues with my inventory not opening in the trunk:
 Currently there is only Support for
 QB-Inventory
-PA-Inventory
 
 I am facing issues in the console. It says something about a model or entity.
 This can be due to a invalid model name! Check if the model you want to attach the interaction to actually exists.
