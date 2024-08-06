@@ -107,19 +107,19 @@ end
 local function ToggleDoor(vehicle, door)
     if GetVehicleDoorLockStatus(vehicle) < 2 then
         local doorAngle = GetVehicleDoorAngleRatio(vehicle, door)
-       -- print("DEBUG: Current door angle ratio: " .. tostring(doorAngle)) -- Debug message
+     --   print("DEBUG: Current door angle ratio: " .. tostring(doorAngle)) -- Debug message
 
         if doorAngle > 0.0 then
             -- Door is open; close it
-          --  print("DEBUG: Closing door " .. tostring(door)) -- Debug message
+         --   print("DEBUG: Closing door " .. tostring(door)) -- Debug message
             SetVehicleDoorShut(vehicle, door, false)
         else
             -- Door is closed; open it
-          --  print("DEBUG: Opening door " .. tostring(door)) -- Debug message
+       --     print("DEBUG: Opening door " .. tostring(door)) -- Debug message
             SetVehicleDoorOpen(vehicle, door, false)
         end
     else
-        print("DEBUG: Vehicle is locked; cannot toggle door") -- Debug message
+      --  print("DEBUG: Vehicle is locked; cannot toggle door") -- Debug message
     end
 end
 
@@ -147,6 +147,7 @@ local function addVehicleInteraction(model)
             action = function(entity)
                 local vehiclePlate = GetVehiclePlate(entity)
                 local vehicleModel = GetEntityModel(entity)
+                local menuId = 69
 
                 -- Check if the vehicle is locked
                 if GetVehicleDoorLockStatus(entity) ~= 1 then
@@ -154,7 +155,16 @@ local function addVehicleInteraction(model)
                     return
                 end
 
-                TriggerEvent('exytralib:open:trunk', vehiclePlate, vehicleModel)
+
+                -- Comment this if you are using PA-Inventory
+                  TriggerEvent('exytralib:open:trunk', vehiclePlate, vehicleModel)
+
+                  -- Uncomment this if you are using PA-Inventory
+       --         TriggerEvent('inventory:client:SetCurrentStash', vehiclePlate .. menuId)
+       --         TriggerServerEvent('inventory:server:OpenInventory', 'stash', vehiclePlate .. menuId, {
+       --         maxweight = 2000000,
+       --         slots = 20
+       --     })
 
                 local doorToToggle = BackEngineVehicles[vehicleModel] and 4 or 5
                 CloseTrunk()
