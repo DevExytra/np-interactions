@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Exytra'
 description 'Interactions Library'
-version '1.0.0'
+version '1.0.1'
 
 -- Define client scripts
 client_scripts {
@@ -24,7 +24,6 @@ shared_scripts {
 -- Define dependencies (assuming you need QBCore and rpemotes)
 dependencies {
     'qb-core',
-    'rpemotes',
     'oxmysql'
 }
 
