@@ -13,9 +13,9 @@ local binModels = {
     'prop_bin_08open',
     'prop_bin_09a',
     'prop_bin_10a',
-    'prop_dumpster_02b', 
+    'prop_dumpster_02b',
     'prop_dumpster_01a',
-    'prop_dumpster_03a' 
+    'prop_dumpster_03a'
     -- Add more models as needed
 }
 
@@ -29,12 +29,13 @@ local searchableDumpsters = {
 -- Define offsets and interaction distances for specific props
 local propDetails = {
     ['prop_bin_01a'] = { offset = vec3(0.0, 0.0, 0.9), interactDst = 2.0, distance = 5.0 },
-    ['prop_bin_10a'] = { offset = vec3(0.0, 0.0, 0.6), interactDst = 1.0, distance = 4.0 }, 
+    ['prop_bin_10a'] = { offset = vec3(0.0, 0.0, 0.6), interactDst = 1.0, distance = 4.0 },
     ['prop_dumpster_02b'] = { offset = vec3(0.0, 0.0, 1.0), interactDst = 2.5, distance = 4.0 },
     ['prop_dumpster_01a'] = { offset = vec3(0.0, 0.0, 1.2), interactDst = 3.0, distance = 4.0 },
     ['prop_dumpster_03a'] = { offset = vec3(0.0, 0.0, 1.1), interactDst = 2.8, distance = 4.0 },
     -- Add details for other models as needed
 }
+
 
 -- Function to check if a table includes a value
 function table.includes(tbl, value)
@@ -53,7 +54,6 @@ local function addBinInteraction(model)
             label = 'Open Trash',
             action = function(entity, coords, args)
                 TriggerEvent('exytralib:open:bin', "Trashcan")
-             --   print(entity, coords, json.encode(args))
             end,
         }
     }
@@ -64,7 +64,6 @@ local function addBinInteraction(model)
             label = 'Search Trash',
             action = function(entity, coords, args)
                 TriggerEvent('qb-trashsearch:client:searchtrash')
-              --  print(entity, coords, json.encode(args))
             end,
         })
     end
