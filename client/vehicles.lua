@@ -140,6 +140,8 @@ local function CloseTrunk()
     SetVehicleDoorShut(vehicle, 5, false)
 end
 
+local trunkState = {}
+
 local function addVehicleInteraction(model)
     local options = {
         {
@@ -155,50 +157,30 @@ local function addVehicleInteraction(model)
                     return
                 end
 
-
-                -- Comment this if you are using PA-Inventory
-                  TriggerEvent('exytralib:open:trunk', vehiclePlate, vehicleModel)
-
-                  -- Uncomment this if you are using PA-Inventory
-       --         TriggerEvent('inventory:client:SetCurrentStash', vehiclePlate .. menuId)
-       --         TriggerServerEvent('inventory:server:OpenInventory', 'stash', vehiclePlate .. menuId, {
-       --         maxweight = 2000000,
-       --         slots = 20
-       --     })
-
                 local doorToToggle = BackEngineVehicles[vehicleModel] and 4 or 5
-                CloseTrunk()
 
-                -- Toggle trunk
-                if trunkState[vehiclePlate] then
-                    -- Trunk is open, so close it
-                    closeTrunk(entity, vehiclePlate, doorToToggle)
-                else
-                    -- Trunk is closed, so open it
+                if not trunkState[vehiclePlate] then
+                    -- Trunk is closed, so open it and the inventory
                     ToggleDoor(entity, doorToToggle)
                     trunkState[vehiclePlate] = true
 
-                    -- Optionally trigger any additional events if needed
-                    -- TriggerEvent('exytralib:open:trunk', vehiclePlate)
+                    -- Open the trunk and inventory
+                    -- Comment this if you are using PA-Inventory
+                    TriggerEvent('exytralib:open:trunk', vehiclePlate, vehicleModel)
+
+                    -- Uncomment this if you are using PA-Inventory
+                    -- TriggerEvent('inventory:client:SetCurrentStash', vehiclePlate .. menuId)
+                    -- TriggerServerEvent('inventory:server:OpenInventory', 'stash', vehiclePlate .. menuId, {
+                    --     maxweight = 2000000,
+                    --     slots = 20
+                    -- })
+                else
+                    -- Trunk is open, so close it
+                    closeTrunk(entity, vehiclePlate, doorToToggle)
+                    trunkState[vehiclePlate] = nil
                 end
             end,
-        },
-        {
-            label = 'Close Trunk',
-            action = function(entity)
-                local vehiclePlate = GetVehiclePlate(entity)
-                local vehicleModel = GetEntityModel(entity)
-
-                -- Check if the vehicle is locked
-                if GetVehicleDoorLockStatus(entity) ~= 1 then
-                    TriggerEvent('QBCore:Notify', "The vehicle is locked", 'error', 1500)
-                    return
-                end
-
-                local doorToToggle = BackEngineVehicles[vehicleModel] and 4 or 5
-                closeTrunk(entity, vehiclePlate, doorToToggle)
-            end,
-        },
+        }
     }
 
     -- Determine the offset and interactDst for the model, default values if not specified
@@ -221,18 +203,8 @@ local function addVehicleInteraction(model)
     })
 end
 
+
 -- Add interactions for each model
 for _, model in ipairs(vehicleModels) do
     addVehicleInteraction(model)
 end
-
-
-RegisterNetEvent('exytralib:open:trunk')
-AddEventHandler('exytralib:open:trunk', function(box)
-    local name = box
-    TriggerServerEvent("inventory:server:OpenInventory", "stash", name, {
-        maxweight = 25000000,
-        slots = 100,
-    })
-    TriggerEvent("inventory:client:SetCurrentStash", name)
-end)
