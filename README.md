@@ -2,6 +2,8 @@
 
 Please read trough this ReadME!
 
+I know that some Inventories might not work if yours dosent work with the trunk or trashcan interaction than PLEASE RUN THE PS INVENTORY SQL
+
 This is only a example on how to add those things I will from time to time add more interactions or functionalities!
 You can always add things your self! :)
 
