@@ -1,5 +1,7 @@
 # np-interactions by Exytra
 
+To Undergrounddevelopment thanks for forking it and pretending you created the resource!
+
 Please read trough this ReadME!
 
 I know that some Inventories might not work if yours dosent work with the trunk or trashcan interaction than PLEASE RUN THE PS INVENTORY SQL
