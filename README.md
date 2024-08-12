@@ -34,3 +34,5 @@ You are always able to contact me on Discord.
 There is currently a known bug with PA-Inventory that it for some reason fucks up the trunk stashes wil work on a fix.
 
 Feel free to add your own Iventory support to do that head over to client > main.lua
+
+- Exytra
