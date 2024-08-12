@@ -1,6 +1,6 @@
 # np-interactions by Exytra
 
-To Undergrounddevelopment thanks for forking it and pretending you created the resource!
+To Undergrounddevelopment thanks for forking it and pretending you created the resource which isnt even standalone.
 
 Please read trough this ReadME!
 
